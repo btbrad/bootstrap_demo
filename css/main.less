@@ -1,0 +1,287 @@
+@import "common.less";
+
+/**
+   * 头部样式
+   */
+#header {
+  > .topbar {
+    height: 40px;
+    border-bottom: 1px solid #c0c0c0;
+    line-height: 40px;
+    > .row {
+      div {
+        height: 40px;
+        font-size: 12px;
+        color: #888888;
+      }
+      div + div {
+        border-left: 1px solid #c0c0c0;
+      }
+    }
+  }
+  .mobile-link {
+    font-size: 12px;
+    color: #888888;
+    &:hover {
+      text-decoration: none;
+      img {
+        display: inline-block;
+        position: absolute;
+        left: 50%;
+        top: 28px;
+        transform: translateX(-50%);
+        z-index: 1001;
+      }
+    }
+    img {
+      display: none;
+    }
+  }
+  a.btn-danger {
+    color: #fff;
+  }
+  .icon-icon {
+    font-size: 50px;
+    color: #e9232c;
+    line-height: 50px;
+    vertical-align: middle;
+  }
+  .icon-logo {
+    font-size: 32px;
+    color: #333;
+    line-height: 32px;
+    vertical-align: middle;
+  }
+}
+
+/**
+   * 轮播图
+   *
+   */
+
+#main_ad {
+  > .carousel-inner {
+    > .item {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      > img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #main_ad {
+    > .carousel-inner {
+      > .item {
+        height: 410px;
+      }
+    }
+  }
+}
+
+/**
+   * 网站特色
+   */
+#special {
+  padding: 50px 0;
+  border-bottom: 1px solid #ccc;
+  a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    &:hover {
+      color: @mainColor;
+    }
+    i {
+      font-size: 30px;
+    }
+  }
+  > .container {
+    > .row {
+      > div {
+        height: 50px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+/**
+   * 立即预约
+   */
+#booking {
+  border-bottom: 1px solid #c0c0c0;
+  padding: 20px 0;
+  > .container {
+    > p {
+      font-size: 16px;
+      margin-bottom: 0;
+    }
+    > p.pull-left {
+      > span {
+        color: @mainColor;
+      }
+      a {
+        text-decoration: none;
+        color: @mainColor;
+        border-bottom: 1px dashed @mainColor;
+      }
+    }
+  }
+}
+
+/**
+   * 产品推荐
+   */
+#products {
+  background-color: #f0f0f0;
+  padding: 40px 0;
+  > .container {
+    > .ul-wrapper {
+      > .nav-tabs {
+        padding-left: 20px;
+        > li {
+          > a {
+            font-size: 16px;
+            color: #333;
+            &:hover {
+              border-color: transparent;
+              background-color: transparent;
+              color: #000;
+            }
+          }
+        }
+        > li.active {
+          > a {
+            background-color: transparent;
+            border: none;
+            border-bottom: 3px solid @mainColor;
+          }
+        }
+      }
+    }
+    .tab-content {
+      padding: 20px 0;
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/**
+   * 新闻版块
+   */
+#news {
+  padding: 50px 0;
+  border-bottom: 1px solid #c0c0c0;
+  .news-title {
+    padding: 20px 0;
+    border-bottom: 1px dashed #c0c0c0;
+    font-size: 18px;
+    font-weight: 400;
+    text-align: center;
+    position: relative;
+    margin-right: 10px;
+    &::after {
+      content: "";
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 5px;
+      border: 1px solid #c0c0c0;
+      position: absolute;
+      bottom: -5px;
+      right: -10px;
+    }
+  }
+  .tab-pane {
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      li {
+        line-height: 35px;
+        text-align: left;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-width: 345px;
+        height: 35px;
+        white-space: nowrap;
+      }
+    }
+  }
+  .nav-pills {
+    li {
+      width: 60px;
+      a {
+        background-color: #c0c0c0;
+        border-radius: 50%;
+        &:hover,
+        &:active,
+        &:focus {
+          border-radius: 50%;
+          background-color: @mainColor;
+        }
+      }
+    }
+    li.active {
+      a {
+        background-color: @mainColor;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #news {
+    .nav-stacked {
+      > li {
+        float: left;
+        margin-right: 50p;
+      }
+    }
+  }
+}
+
+/**
+   * 合作伙伴
+   */
+#partner {
+  padding: 30px 0;
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: 820px;
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    li {
+      float: left;
+      a {
+        padding: 10px 20px;
+        font-size: 50px;
+        color: #888888;
+        &:hover{
+          text-decoration: none;
+        }
+      }
+    }
+    li + li {
+      border-left: 1px dashed #e0e0e0;
+    }
+  }
+}
+
+/**
+   * 脚注样式
+   */
+#footer {
+  /* height: 200px; */
+}
+
